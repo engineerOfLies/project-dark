@@ -1,0 +1,1800 @@
+# Item List
+#             0       1     2       3     4         5       6         7             8
+#enum EQUIPS {E_Head,E_Body,E_Neck,E_Legs, E_Ring1, E_Ring2, E_Primary1,E_Primary2, E_Secondary1
+#             9             10        11
+#             E_Secondary2, E_Arrow, E_Tool};
+#requires is attributes
+
+
+# magic catalysts:
+
+<item> Wand
+<sprite> images/models/wand.png
+<equips> 6
+<requires> 0 0 0 0 12 0
+<cost>  200
+<damage> 5
+<balance> 0 
+<upgradable> 0
+<sellable> 1
+<stackable> 0
+<range> 10
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> cast
+<actoins> stab
+# limit 8 specials
+<special> magic
+<desc> Wands are used as a catalyst to cast magic spells.  When equipped in the off hand, it allows you to cast any magic spell that you know, provided you have enough Mana.
+<end>
+
+<item> Ivory Wand
+<sprite> images/models/ivory_wand.png
+<equips> 6
+<requires> 0 0 0 0 12 0
+<cost> 300
+<damage> 5
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 0
+<range> 10
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> cast
+<actoins> stab
+# limit 8 specials
+<special> necromancy
+<desc> Ivory wands are used as a catalyst to invoke necromancy.  When equipped in the off hand, it allows you to cast any necromancy spell that you know, provided you have enough Mana and a dead body around for summons.
+<end>
+
+<item> White Stone
+<sprite> images/models/white_stone.png
+<equips> 8
+<requires> 0 0 10 0 12 0
+<cost> 400
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 0
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> cast
+# limit 8 specials
+<special> alchemy
+<desc> Philosopher Stones are used as a catalyst to perform transmutation.  When equipped in the off hand, it allows you to transmute a base into any formula that you know, provided you have enough mana and the appropriate Herbal or Alchemy Base.
+<end>
+
+<item> Wood Relic
+<sprite> images/models/wood_relic.png
+<equips> 8
+<requires> 0 0 0 0 0 14
+<cost> 100
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 0
+<stackable> 0
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> cast
+# limit 8 specials
+<special> favor
+<desc> Relics are artifacts with a special connection to the Divine.  When equipped in the off hand, it allows you to invoke the power of God to perform any Divine Favor you have learned.  The strength of the favor may be affected by your faith...
+<end>
+
+# weapons
+
+<item> Dagger
+<icon> images/icons/dagger.png
+<sprite> images/models/dagger.png
+<equips> 6
+<requires> 4 0 10 0 0 0
+<cost> 25
+<damage> 10
+<balance> 2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 16
+<speed> 1.2
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> stab
+<actions> slash
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Short Sword
+<sprite> images/models/short_sword.png
+<equips> 6
+<requires> 8 0 8 0 0 0
+<cost> 50
+<damage> 20
+<balance> 1
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 30
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+<actions> slash
+<actions> stab
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Rapier
+<icon> images/icons/rapier.png
+<sprite> images/models/rapier.png
+<equips> 6
+<requires> 10 0 14 0 0 0
+<cost> 125
+<damage> 30
+<balance> 1
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 38
+<speed> 0.9
+<weight> 8
+# primary action, secondary and backup if skills not available
+<actions> stab
+<actions> parry
+<actions> slash
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Long Sword
+<sprite> images/models/longsword.png
+<equips> 6
+<requires> 14 0 8 0 0 0
+<cost> 150
+<damage> 35
+<balance> 1
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 35
+<speed> 0.9
+<weight> 10
+# primary action, secondary and backup if skills not available
+<actions> slash
+<actions> stab
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Fauchard
+<sprite> images/models/fauchard.png
+<equips> 6
+<requires> 16 0 6 0 0 0
+<cost> 200
+<damage> 40
+<balance> -1
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 50
+<speed> 0.5
+<weight> 16
+# primary action, secondary and backup if skills not available
+<actions> slash
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Pike
+<sprite> images/models/pike.png
+<equips> 6
+<requires> 18 0 6 0 0 0
+<cost> 300
+<damage> 55
+<balance> -2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 45
+<speed> 0.4
+<weight> 17
+# primary action, secondary and backup if skills not available
+<actions> slash
+<actions> crush
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Short Spear
+<icon> images/icons/spear.png
+<sprite> images/models/shortspear.png
+<equips> 6
+<requires> 12 0 8 0 0 0
+<cost> 100
+<damage> 25
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 40
+<speed> 1.2
+<weight> 12
+# primary action, secondary and backup if skills not available
+<actions> stab
+<actions> lunge
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Club
+<sprite> images/models/club.png
+<equips> 6
+<requires> 8 0 4 0 0 0
+<cost> 10
+<damage> 20
+<balance> -1
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 30
+<speed> 0.6
+<weight> 10
+# primary action, secondary and backup if skills not available
+<actions> crush
+<actions> slash
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Hand Axe
+<icon> images/icons/field_axe.png
+<sprite> images/models/handaxe.png
+<equips> 6
+<requires> 9 0 4 0 0 0
+<cost> 80
+<damage> 30
+<balance> -2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 32
+<speed> 1
+<weight> 15
+# primary action, secondary and backup if skills not available
+<actions> crush
+<actions> slash
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Battle Axe
+<icon> images/icons/battleaxe
+<sprite> images/models/handaxe.png
+<equips> 6
+<requires> 9 0 4 0 0 0
+<cost> 80
+<damage> 30
+<balance> -2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 32
+<speed> 1
+<weight> 15
+# primary action, secondary and backup if skills not available
+<actions> crush
+<actions> slash
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Field Axe
+<sprite> images/models/handaxe.png
+<equips> 6
+<requires> 9 0 4 0 0 0
+<cost> 80
+<damage> 30
+<balance> -2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 32
+<speed> 1
+<weight> 15
+# primary action, secondary and backup if skills not available
+<actions> crush
+<actions> slash
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Mace
+<sprite> images/models/mace.png
+<equips> 6
+<requires> 10 0 4 0 0 0
+<cost> 100
+<damage> 35
+<balance> -2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+<range> 35
+<speed> 0.5
+<weight> 20
+# primary action, secondary and backup if skills not available
+<actions> crush
+<actions> slash
+# limit 8 <special>
+<special> weapon
+<end>
+
+<item> Short Bow
+<sprite> images/models/short_bow.png
+<equips> 6
+<requires> 8 0 10 0 0 0
+<cost> 200
+<damage> 25
+<balance> -2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for bows and throwing weapons is in tiles
+<range> 12
+<speed> 1.2
+<weight> 15
+# primary action, secondary and backup if skills not available
+<actions> shoot
+# limit 8 <special>
+<special> arrows
+<special> 2handed
+<special> weapon
+<end>
+
+<item> Long Bow
+<sprite> images/models/longbow.png
+<equips> 6
+<requires> 14 0 14 0 0 0
+<cost> 200
+<damage> 35
+<balance> -2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for bows and throwing weapons is in tiles
+<range> 15
+<speed> 1.2
+<weight> 20
+# primary action, secondary and backup if skills not available
+<actions> shoot
+# limit 8 <special>
+<special> arrows
+<special> 2handed
+<special> weapon
+<end>
+
+#  shields
+
+<item> Buckler
+<icon> images/icons/battleaxe.png
+<sprite> images/models/buckler.png
+<equips> 8
+<requires> 4 0 8 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 60
+<balance> -2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 15
+#speed as a multiplier  of normal speed
+<speed> 0.9
+<weight> 5
+# primary action, secondary and backup if skills not available
+<actions> block
+<actions> deflect
+# limit 8 <special>
+<special> shield
+<end>
+
+<item> Wood Shield
+<sprite> images/models/wood_shield.png
+<equips> 8
+<requires> 8 0 4 0 0 0
+<cost> 100
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 80
+<balance> -2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 25
+<speed> 1
+<weight> 10
+# primary action, secondary and backup if skills not available
+<actions> block
+<actions> deflect
+# limit 8 <special>
+<special> shield
+<end>
+
+<item> Boss Shield
+<sprite> images/models/wood_shield.png
+<equips> 8
+<requires> 6 0 4 0 0 0
+<cost> 80
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 70
+<balance> -2
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 25
+<speed> 1
+<weight> 10
+# primary action, secondary and backup if skills not available
+<actions> block
+<actions> deflect
+# limit 8 <special>
+<special> shield
+<end>
+
+<item> Kite Shield
+<sprite> images/models/kite_shield.png
+<equips> 8
+<requires> 14 0 5 0 0 0
+<cost> 200
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 90
+<balance> -4
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 35
+<speed> 1.2
+<weight> 20
+# primary action, secondary and backup if skills not available
+<actions> block
+<actions> deflect
+# limit 8 <special>
+<special> shield
+<end>
+
+<item> Heater Shield
+<sprite> images/models/heater_shield.png
+<equips> 8
+<requires> 16 0 5 0 0 0
+<cost> 300
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 95
+<balance> -6
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 38
+<speed> 1.3
+<weight> 25
+# primary action, secondary and backup if skills not available
+<actions> block
+# limit 8 <special>
+<special> shield
+<end>
+
+<item> Tower Shield
+<sprite> images/models/tower_shield.png
+<equips> 8
+<requires> 18 0 5 0 0 0
+<cost> 300
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 100
+<balance> -9
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 90
+<speed> 1.3
+<weight> 25
+# primary action, secondary and backup if skills not available
+<actions> block
+# limit 8 <special>
+<special> shield
+<end>
+
+# ranged tools
+
+<item> Throwing Knife
+<icon> images/icons/dagger.png
+<sprite> images/models/knife.png
+<equips> 11
+<requires> 1 0 10 0 0 0
+<cost> 5
+<damage> 4
+<balance> 2
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+#  For thrown and bows range is in tiles.
+<range> 10
+<speed> 1.2
+<weight> 0.5
+# primary action, secondary and backup if skills not available
+<actions> throw
+# limit 8 <special>
+<end>
+
+<item> Wood Arrow
+<sprite> images/models/arrow.png
+<equips> 10
+<requires> 0 0 0 0 0 0
+<cost> 2
+<damage> 3
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+#  For thrown and bows range is in tiles.
+<range> 12
+<speed> 1
+<weight> 0.3
+# primary action, secondary and backup if skills not available
+# limit 8 <special>
+<special> arrow
+<end>
+
+
+# Usable Items
+
+<item> Healing Salve
+<icon> images/effects/potionthrown_r.png
+<sprite> images/effects/potionthrown_r.png
+<equips> 11
+<requires> 0 0 0 0 0 0
+<cost> 10
+<damage> 25
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> use
+# limit 8 <special>
+<special> heal
+<desc> This ointment can instantly heal light wounds.
+<end>
+
+<item> Mana Vial
+<icon> images/effects/potionthrown.png
+<sprite> images/effects/potionthrown.png
+<equips> 11
+<requires> 0 0 0 0 0 0
+<cost> 30
+<damage> 20
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> use
+# limit 8 <special>
+<special> mana
+<desc> This small vial of blue liquid will restore some of your mana when used.
+<end>
+
+<item> Purge Salve
+<icon> images/effects/potionthrown_g.png
+<sprite> images/effects/potionthrown_g.png
+<equips> 11
+<requires> 0 0 0 0 0 0
+<cost> 20
+<damage> 25
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> use
+# limit 8 <special>
+<special> purge
+<desc> This ointment can reduce the effects of poison
+<end>
+
+<item> Cure Pills
+<icon> images/effects/potionthrown_g.png
+<sprite> images/effects/potionthrown_g.png
+<equips> 11
+<requires> 0 0 0 0 0 0
+<cost> 30
+<damage> 25
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> use
+# limit 8 <special>
+<special> cure
+<desc> These pills will aid in the recovery from sickness.
+<end>
+
+<item> Black Cloud
+<icon> images/effects/potionthrown_k.png
+<sprite> images/effects/potionthrown_k.png
+<equips> 11
+<requires> 0 0 0 0 0 0
+<cost> 100
+<damage> 48
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> Athrow
+# limit 8 <special>
+<special> spawn fog
+<desc> When thrown, this potion explodes into a billowing thick cloud maskinging any sight.
+<end>
+
+<item> Powder Bomb
+<icon> images/effects/potionthrown_k.png
+<sprite> images/effects/potionthrown_k.png
+<equips> 11
+<requires> 0 0 0 0 0 0
+<cost> 100
+<damage> 25
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> Athrow
+# limit 8 <special>
+<special> damage fire
+<special> damage crush
+<special> radius 48
+<special> color 0.9 0.5 0.1
+<desc> When thrown, this potion explodes dealing fire and pressure damage
+<end>
+
+<item> Flame Blade
+<icon> images/effects/potionthrown_y.png
+<sprite> images/effects/potionthrown_y.png
+<equips> 11
+<requires> 0 0 0 0 0 0
+<cost> 100
+<damage> 25
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> use
+# limit 8 <special>
+<special> bonus damage fire
+<desc> This ointment can reduce the effects of poison
+<end>
+
+<item> Vacuum Jar
+<icon> images/effects/potionthrown_k.png
+<sprite> images/effects/potionthrown_k.png
+<equips> 11
+<requires> 0 0 0 0 0 0
+<cost> 100
+<damage> 25
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> Athrow
+# limit 8 <special>
+<special> damage slash
+<special> kick -20
+<desc> This ointment can reduce the effects of poison
+<end>
+
+<item> Shadow Potion
+<icon> images/effects/potionthrown_k.png
+<sprite> images/effects/potionthrown_k.png
+<equips> 11
+<requires> 0 0 0 0 0 0
+<cost> 500
+<damage> 100
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> use
+# limit 8 <special>
+<special> stealth
+<desc> This potion will wrap you in shadows making you harder to detect.
+<end>
+
+<item> Holy Flash
+<icon> images/effects/potionthrown_y.png
+<sprite> images/effects/potionthrown_y.png
+<equips> 11
+<requires> 0 0 0 0 0 0
+<cost> 500
+<damage> 50
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> Athrow
+# limit 8 <special>
+<special> damage light
+<desc> When thrown, this potion explodes in an intense light
+<end>
+
+#spendable items
+
+<item> Herbal Base
+<icon> images/effects/potionthrown_g.png
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 20
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# limit 8 <special>
+<special> alchemy
+<desc> This mixture of various herbs can be transmuted into basic compounds with alchemy.
+<end>
+
+<item> Alchemy Base
+<icon> images/effects/potionthrown_y.png
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 50
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# limit 8 <special>
+<special> alchemy
+<desc> This mixture of active chemicals can be easily transmuted into advanced compounds with alchemy.
+<end>
+
+<item> Bone Fragment
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 10
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# limit 8 <special>
+<special> necromancy
+<desc> These can be used as base to summon undead with necromancy if there are no other suitable corpses lying around.
+<end>
+
+# armor
+
+<item> Leather Hood
+<sprite> images/models/leather_hood.png
+<equips> 0
+<requires> 2 0 0 0 0 0
+<cost> 20
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 2
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> silent
+<special> respierce 1
+<end>
+
+<item> Leather Armor
+<sprite> images/models/leather_armor.png
+<equips> 1
+<requires> 5 0 0 0 0 0
+<cost> 70
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 3
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> silent
+<special> respierce 1
+<end>
+
+<item> Leather Boots
+<sprite> images/models/leather_boots.png
+<equips> 3
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> silent
+<special> respierce 1
+<end>
+
+<item> Leather Cape
+<sprite> images/models/leather_cape.png
+<equips> 2
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> silent
+<special> respierce 1
+<end>
+
+<item> Brigandine Hood
+<sprite> images/models/brigandine_hood.png
+<equips> 0
+<requires> 2 0 0 0 0 0
+<cost> 40
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 3
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 0.9
+<weight> 1
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> silent
+<special> resslash 1
+<end>
+
+<item> Brigandine Armor
+<sprite> images/models/brigandine_armor.png
+<equips> 1
+<requires> 6 0 0 0 0 0
+<cost> 100
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 4
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 0.9
+<weight> 6
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> silent
+<special> resslash 1
+<end>
+
+<item> Brigandine Boots
+<sprite> images/models/brigandine_boots.png
+<equips> 3
+<requires> 2 0 0 0 0 0
+<cost> 70
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> silent
+<special> resslash 1
+<end>
+
+<item> Brigandine Cape
+<sprite> images/models/brigandine_cape.png
+<equips> 2
+<requires> 2 0 0 0 0 0
+<cost> 70
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> silent
+<special> resslash 1
+<end>
+
+<item> Acolyte Hood
+<sprite> images/models/acolyte_hood.png
+<equips> 0
+<requires> 2 0 0 0 0 0
+<cost> 20
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> resmagic 2
+<special> armor
+<end>
+
+<item> Acolyte Mantle
+<sprite> images/models/acolyte_mantle.png
+<equips> 1
+<requires> 5 0 0 0 0 0
+<cost> 70
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 3
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resmagic 4
+<end>
+
+<item> Acolyte Boots
+<sprite> images/models/acolyte_boots.png
+<equips> 3
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resmagic 2
+<end>
+
+<item> Acolyte Cape
+<sprite> images/models/acolyte_cape.png
+<equips> 2
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resmagic 2
+<end>
+
+<item> Master Hood
+<sprite> images/models/master_hood.png
+<equips> 0
+<requires> 2 0 0 0 0 0
+<cost> 20
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 2
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resmagic 1
+<special> resshadow 1
+<end>
+
+<item> Master Mantle
+<sprite> images/models/master_mantle.png
+<equips> 1
+<requires> 5 0 0 0 0 0
+<cost> 70
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 3
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resmagic 2
+<special> resshadow 2
+<end>
+
+<item> Master Boots
+<sprite> images/models/master_boots.png
+<equips> 3
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resmagic 1
+<special> resshadow 1
+<end>
+
+<item> Master Cape
+<sprite> images/models/master_cape.png
+<equips> 2
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resmagic 1
+<special> resshadow 1
+<end>
+
+<item> Sage Hood
+<sprite> images/models/sage_hood.png
+<equips> 0
+<requires> 2 0 0 0 0 0
+<cost> 20
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 3
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> reslight 1
+<end>
+
+<item> Sage Mantle
+<sprite> images/models/sage_mantle.png
+<equips> 1
+<requires> 5 0 0 0 0 0
+<cost> 70
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 4
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> reslight 2
+<end>
+
+<item> Sage Boots
+<sprite> images/models/sage_boots.png
+<equips> 3
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 2
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> reslight 1
+<end>
+
+<item> Sage Cape
+<sprite> images/models/sage_cape.png
+<equips> 2
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> reslight 1
+<end>
+
+<item> Apprentice Hood
+<sprite> images/models/apprentice_hood.png
+<equips> 0
+<requires> 2 0 0 0 0 0
+<cost> 20
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 2
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resfire 1
+<special> resice 1
+<special> reselec 1
+<end>
+
+<item> Apprentice Mantle
+<sprite> images/models/apprentice_mantle.png
+<equips> 1
+<requires> 5 0 0 0 0 0
+<cost> 70
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 3
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resfire 2
+<special> resice 1
+<special> reselec 1
+<end>
+
+<item> Apprentice Boots
+<sprite> images/models/apprentice_boots.png
+<equips> 3
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resfire 1
+<special> resice 1
+<special> reselec 1
+<end>
+
+<item> Apprentice Cape
+<sprite> images/models/apprentice_cape.png
+<equips> 2
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resfire 1
+<special> resice 1
+<special> reselec 1
+<end>
+
+<item> Ring Coif
+<sprite> images/models/ring_coif.png
+<equips> 0
+<requires> 2 0 0 0 0 0
+<cost> 20
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 4
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resslash 1
+<special> loud
+<end>
+
+<item> Ring Mail
+<sprite> images/models/ring_mail.png
+<equips> 1
+<requires> 5 0 0 0 0 0
+<cost> 70
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 6
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resslash 2
+<special> loud
+<end>
+
+<item> Ring Greeves
+<sprite> images/models/ring_greeves.png
+<equips> 3
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 4
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resslash 2
+<special> loud
+<end>
+
+<item> Ring Cloak
+<sprite> images/models/ring_cloak.png
+<equips> 2
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 3
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> resslash 2
+<special> loud
+<end>
+
+<item> Chain Coif
+<sprite> images/models/chain_coif.png
+<equips> 0
+<requires> 2 0 0 0 0 0
+<cost> 20
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 4
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> respierce 1
+<special> loud
+<end>
+
+<item> Chain Mail
+<sprite> images/models/chain_mail.png
+<equips> 1
+<requires> 5 0 0 0 0 0
+<cost> 70
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 6
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> respierce 2
+<special> loud
+<end>
+
+<item> Chain Leggings
+<sprite> images/models/chain_leggings.png
+<equips> 3
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 4
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> respierce 2
+<special> loud
+<end>
+
+<item> Heavy Cloak
+<sprite> images/models/heavy_cloak.png
+<equips> 2
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 3
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<end>
+
+<item> Plate Helm
+<sprite> images/models/plate_helm.png
+<equips> 0
+<requires> 2 0 0 0 0 0
+<cost> 20
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 2
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> loud
+<special> rescrush 2
+<end>
+
+<item> Plate Mail
+<sprite> images/models/plate_mail.png
+<equips> 1
+<requires> 5 0 0 0 0 0
+<cost> 70
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 3
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> loud
+<special> rescrush 4
+<end>
+
+<item> Plate Greeves
+<sprite> images/models/plate_greeves.png
+<equips> 3
+<requires> 2 0 0 0 0 0
+<cost> 50
+# for shields its the perscentage of damage stopped on block (out of 100)
+<damage> 1
+<balance> 0
+<upgradable> 1
+<sellable> 1
+<stackable> 0
+# range for shields is the arc length (+/-degrees off of center)
+<range> 0
+<speed> 1
+<weight> 5
+# primary action, secondary and backup if skills not available
+# <actions> block
+# limit 8 <special>
+<special> armor
+<special> loud
+<special> rescrush 2
+<end>
+
+# rings
+
+<item> Ring of Undead Resistance
+<equips> 4
+<requires> 0 0 0 0 0 0
+<cost> 100
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 0.5
+# primary action, secondary and backup if skills not available
+# limit 8 <special>
+<special> resistdrain
+<desc> This is a rather plain ring, but for some reason you feel comforted while holding it.
+<end>
+
+
+# special items
+
+<item> Lock Picks
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 30
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> Lock Picking
+# limit 8 <special>
+<end>
+
+<item> Purse Cutter
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 30
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+<actions> Pocket Picking
+<desc> A concealable curved blade.  It is useful for silently cutting the coin purse from a mark or opening packs.
+# limit 8 <special>
+<end>
+
+<item> Grappling hook
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 100
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 2
+# primary action, secondary and backup if skills not available
+<actions> Climbing
+<desc> An Iron grappling hook afixed to a length of rope.  This can aid in climbing.
+# limit 8 <special>
+<end>
+
+<item> stick
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 0
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# limit 8 <special>
+<special> questitem
+<desc> An ordinary stick... Or is it?
+<end>
+
+<item> Rusty Key
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 0
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 1
+# primary action, secondary and backup if skills not available
+# limit 8 <special>
+<special> questitem
+<desc> Although tarnished, this key is rather intricate!
+<end>
+
+<item> Silver Chalice
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 0
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 1
+<weight> 2
+# primary action, secondary and backup if skills not available
+# limit 8 <special>
+<special> questitem
+<desc> This looks like a very valuable item.
+<end>
+
+<item> Membership Card
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 50
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 0
+<weight> 0.1
+# primary action, secondary and backup if skills not available
+# limit 8 <special>
+<special> questitem
+<desc> This card gives membership to an exclusive guild...
+<end>
+
+<item> Gate Stone
+<equips> -1
+<requires> 0 0 0 0 0 0
+<cost> 0
+<damage> 0
+<balance> 0
+<upgradable> 0
+<sellable> 1
+<stackable> 1
+<range> 0
+<speed> 0
+<weight> 1
+# primary action, secondary and backup if skills not available
+# limit 8 <special>
+<special> questitem
+<desc> This stone camme from part of a Rune Gate.
+<end>
+

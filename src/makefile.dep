@@ -1,0 +1,72 @@
+SDL_rwops_zzip.o: SDL_rwops_zzip.c SDL_rwops_zzip.h
+armatures.o: armatures.c armatures.h graphics.h initGL.h
+audio.o: audio.c audio.h
+c_collide.o: c_collide.c c_collide.h entity.h audio.h modelLoader.h \
+ graphics.h initGL.h armatures.h levels.h glmodel.h glm.h gtrace.h \
+ levelmesh.h
+combat.o: combat.c combat.h gtrace.h levelmesh.h levels.h glmodel.h glm.h \
+ graphics.h initGL.h modelLoader.h armatures.h entity.h audio.h \
+ levelobj.h particle.h monsters.h player.h items.h
+controls.o: controls.c controls.h graphics.h initGL.h menus.h hud.h \
+ modelLoader.h armatures.h audio.h
+enemies.o: enemies.c enemies.h entity.h audio.h modelLoader.h graphics.h \
+ initGL.h armatures.h levels.h glmodel.h glm.h particle.h projectiles.h \
+ levelobj.h c_collide.h gtrace.h levelmesh.h
+entity.o: entity.c entity.h audio.h modelLoader.h graphics.h initGL.h \
+ armatures.h levels.h glmodel.h glm.h hud.h
+font.o: font.c graphics.h initGL.h
+game.o: game.c graphics.h initGL.h modelLoader.h armatures.h menus.h \
+ hud.h audio.h lighting.h entity.h levels.h glmodel.h glm.h particle.h \
+ controls.h
+glm.o: glm.c glm.h graphics.h initGL.h
+glmodel.o: glmodel.c glmodel.h glm.h graphics.h initGL.h lighting.h
+graphics.o: graphics.c graphics.h initGL.h
+gtrace.o: gtrace.c gtrace.h levelmesh.h levels.h glmodel.h glm.h \
+ graphics.h initGL.h modelLoader.h armatures.h entity.h audio.h \
+ c_collide.h
+hud.o: hud.c hud.h graphics.h initGL.h modelLoader.h armatures.h
+initGL.o: initGL.c initGL.h
+items.o: items.c items.h entity.h audio.h modelLoader.h graphics.h \
+ initGL.h armatures.h levels.h glmodel.h glm.h player.h combat.h gtrace.h \
+ levelmesh.h levelobj.h
+levelmesh.o: levelmesh.c levelmesh.h levels.h glmodel.h glm.h graphics.h \
+ initGL.h modelLoader.h armatures.h
+levelobj.o: levelobj.c levelobj.h levels.h glmodel.h glm.h graphics.h \
+ initGL.h modelLoader.h armatures.h entity.h audio.h levelmesh.h player.h \
+ combat.h gtrace.h items.h monsters.h npcs.h menus.h hud.h c_collide.h \
+ projectiles.h
+levels.o: levels.c levels.h glmodel.h glm.h graphics.h initGL.h \
+ modelLoader.h armatures.h particle.h entity.h audio.h enemies.h hud.h \
+ levelmesh.h levelobj.h player.h combat.h gtrace.h items.h region.h \
+ menus.h
+lighting.o: lighting.c lighting.h graphics.h initGL.h
+menus.o: menus.c menus.h hud.h graphics.h initGL.h modelLoader.h \
+ armatures.h audio.h glmodel.h glm.h particle.h entity.h levels.h \
+ player.h combat.h gtrace.h levelmesh.h levelobj.h items.h enemies.h \
+ weapons.h monsters.h npcs.h region.h controls.h
+modelLoader.o: modelLoader.c modelLoader.h graphics.h initGL.h \
+ armatures.h
+monsters.o: monsters.c monsters.h entity.h audio.h modelLoader.h \
+ graphics.h initGL.h armatures.h levels.h glmodel.h glm.h gtrace.h \
+ levelmesh.h player.h combat.h levelobj.h items.h c_collide.h path.h \
+ projectiles.h
+npcs.o: npcs.c npcs.h monsters.h entity.h audio.h modelLoader.h \
+ graphics.h initGL.h armatures.h levels.h glmodel.h glm.h gtrace.h \
+ levelmesh.h player.h combat.h levelobj.h items.h menus.h hud.h
+particle.o: particle.c particle.h graphics.h initGL.h glmodel.h glm.h \
+ modelLoader.h armatures.h entity.h audio.h levels.h
+path.o: path.c path.h levels.h glmodel.h glm.h graphics.h initGL.h \
+ modelLoader.h armatures.h gtrace.h levelmesh.h entity.h audio.h \
+ levelobj.h
+player.o: player.c player.h entity.h audio.h modelLoader.h graphics.h \
+ initGL.h armatures.h levels.h glmodel.h glm.h combat.h gtrace.h \
+ levelmesh.h levelobj.h items.h c_collide.h projectiles.h particle.h \
+ weapons.h npcs.h monsters.h menus.h hud.h controls.h
+projectiles.o: projectiles.c projectiles.h entity.h audio.h modelLoader.h \
+ graphics.h initGL.h armatures.h levels.h glmodel.h glm.h levelobj.h \
+ particle.h c_collide.h gtrace.h levelmesh.h combat.h player.h items.h
+region.o: region.c region.h levels.h glmodel.h glm.h graphics.h initGL.h \
+ modelLoader.h armatures.h entity.h audio.h
+weapons.o: weapons.c weapons.h player.h entity.h audio.h modelLoader.h \
+ graphics.h initGL.h armatures.h levels.h glmodel.h glm.h combat.h \
+ gtrace.h levelmesh.h levelobj.h items.h

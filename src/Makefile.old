@@ -1,0 +1,57 @@
+##############################################################################
+#
+# The Linux-GCC Makefile
+#
+##############################################################################
+
+#
+# Object files.
+#
+
+
+OBJ = game.o graphics.o font.o initGL.o hud.o menus.o armatures.o glm.o glmodel.o modelLoader.o lighting.o audio.o entity.o levels.o player.o particle.o c_collide.o projectiles.o weapons.o levelmesh.o levelobj.o monsters.o gtrace.o combat.o items.o npcs.o path.o region.o controls.o
+
+#
+# Compiler stuff -- adjust to your system.
+#
+
+# Linux
+
+CC     = gcc
+SDL_CFLAGS = `sdl-config --cflags`
+SDL_LDFLAGS = `sdl-config --libs` -lSDL_image -lSDL_ttf -lSDL_mixer -lGLU -lz -lphysfs
+LFLAGS = -g -o ../pdark libchipmunk.a
+CFLAGS = -g -Wall -pedantic
+
+#
+# Targets
+#
+
+pdark: $(OBJ)
+	gcc $(OBJ) $(LFLAGS) $(SDL_LDFLAGS)
+  
+depend:
+	@-rm makefile.dep
+	@echo Creating dependencies.
+	@for i in *.c; do $(CC) $(INC) -MM $$i; done > makefile.dep
+	@echo Done.
+
+clean:
+	rm *.o ../pdark
+
+count:
+	wc *.c *.h makefile
+
+#
+# Dependencies.
+#
+
+include makefile.dep
+
+#
+# The default rule.
+#
+
+.c.o:
+	gcc $(CFLAGS) $(SDL_CFLAGS) -c $<
+

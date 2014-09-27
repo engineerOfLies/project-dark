@@ -1,0 +1,630 @@
+# NPC definitions
+
+<NPC> Weyland
+<monster> peasant1
+<questlist>
+<quest> Infernal Coal
+<qdesc> Rumor tells of a smith who created a special type of coal.  One that will never go out and can burn with temperatures as hot as the fires of hell.  With that I could make some truly legendary equipment...
+<win> return Infernal Coal
+<reward> grace 500
+</quest>
+</questlist>
+<shoplist>
+<item> Upgrade
+# in the case of Upgrades the markup is the level of upgrades that can be performed.
+<markup> 1
+<type> service
+<condition> quest incomplete Infernal Coal
+</item>
+<item> Upgrade
+# in the case of Upgrades the markup is the level of upgrades that can be performed.
+<markup> 2
+<type> service
+<condition> quest complete Infernal Coal
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> You are most welcome here.  I thank you for getting me out of that foul place.  I will aide you where I can.
+</message>
+<message> Upgrading
+<dialog> My Apprentice has not yet learned some of the advanced techniques.  I will be able to add different properties to your equpment if you can get me the right materials.
+</message>
+<message> Price?
+<dialog> Because you saved me, I will upgrade your equipment at cost.  Just enough to replenish my supplies.  I owe you after all.
+</message>
+</dialoglist>
+</NPC>
+
+
+<NPC> Henry
+<monster> peasant2
+<questlist>
+<quest> Lost Forge Master
+<qdesc> My Master has been detained by the town under suspicion of treason.  I fear he may never again see the light of day.  Please find him and resuce him.
+<win> save dungeon05.lvl Sigurd
+<reward> grace 500
+</quest>
+</questlist>
+<shoplist>
+<item> Upgrade
+<markup> 0
+<type> service
+</item>
+<item> Chain Coif
+<markup> 1
+<type> item
+</item>
+<item> Chain Mail
+<markup> 1
+<type> item
+</item>
+<item> Chain Leggings
+<markup> 1
+<type> item
+</item>
+<item> Ring Coif
+<markup> 1
+<type> item
+</item>
+<item> Ring Mail
+<markup> 1
+<type> item
+</item>
+<item> Ring Greeves
+<markup> 1
+<type> item
+</item>
+<item> Ring Cape
+<markup> 1
+<type> item
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Welcome to my Forge.  What can I get you?
+</message>
+<message> Forge
+<dialog> This is my masters forge.  I am only keeping it for him while he is... detained.  I am not as skilled as my master, but I may be able to upgrade some of your equipment a little.
+</message>
+</dialoglist>
+</NPC>
+
+
+<NPC> Bill
+<monster> peasant1
+<questlist>
+</questlist>
+<shoplist>
+<item> Rest
+<markup> 0
+<type> service
+</item>
+<item> Inventory
+<markup> 0
+<type> service
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Hello.  I am the innkeeper, welcome to my inn.  Here you can rest up and store your unneeded equipment here.  You can even stay here for free, but if you fall, I will pawn your stuff.
+</message>
+<message> Inventory
+<dialog> In your travels you are bound to acquire more than you can carry.  You might not want to throw it all away.  Anyone staying at my inn is welcome to store their goods in the lockbox in their room.
+</message>
+<message> Ask About The Town
+<dialog> We are the last town not under the rule of the Emperor.  He and his Lords of Ruin have conquored the 5 realms.
+</message>
+<message> Resistance
+<dialog> There isn't much of a resistance.  We do what we can to survive.  So far we have been left alone as we pose no real threat to the empire.
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> Woodrow
+<monster> peasant2
+<questlist>
+</questlist>
+<shoplist>
+<item> Rest
+<markup> 30
+<type> service
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Welcome.  This is the last open establishment at this poor mining town.   I would be happy to put you up for the night, for a small fee.
+</message>
+<message> Mining Town
+<dialog> This town was once booming with miners and their families.  Since the Shadow Lord has come to power.  Many of the people hhave gone missing.
+</message>
+<message> The Mines
+<dialog> North of town is a pass that leads to the old mines.  They are closed now, but you can still hear the sound of mining going on...
+</message>
+<message> The Shadow Lord
+<dialog> He is one of the 5 lords under the Emperor.  He lives atop the Tower of Shadow high in the mountains.  There are rumors that he has unsavory apetites...
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> Victor
+<monster> wizard
+<questlist>
+</questlist>
+<shoplist>
+<item> Flame Bolt
+<markup> 1
+<type> spell
+</item>
+<item> Magic Shield
+<markup> 1
+<type> spell
+</item>
+<item> Resistance
+<markup> 1
+<type> spell
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Ahoy.  I am Victor, practitioner of the mystic Arts.  If you are seeking magic. You have come to the right place.
+</message>
+<message> Magic
+<dialog> The secret power of the mind over the natural energies that surround us.  For those of us with enough focus and the right tools.  We can accomplish the impossible!
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> Ordus
+<monster> peasant2
+<questlist>
+</questlist>
+<shoplist>
+<item> Dagger
+<markup> 1
+<type> item
+</item>
+<item> Short Sword
+<markup> 1
+<type> item
+</item>
+<item> Long Sword
+<markup> 1
+<type> item
+</item>
+<item> Hand Axe
+<markup> 1
+<type> item
+</item>
+<item> Mace
+<markup> 1
+<type> item
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Good Day.  I am Ordus.  The arms dealer.  If you are in need of weapons.  I can help.
+</message>
+<message> Weapons
+<dialog> I sell some of the finest weapons that can be bought.
+</message>
+<message> Resistance
+<dialog> I keep the resistance armed and they keep me well paid.
+</message>
+</dialoglist>
+</NPC>
+
+
+<NPC> Dom
+<monster> peasant2
+<questlist>
+</questlist>
+<shoplist>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> A newcommer, eh.  Good luck, this is a tough time we live in.
+</message>
+<message> This Town
+<dialog> This town is a refugee camp of sorts.  We're all escaping from somewhere else in the 5 realms.
+</message>
+<message> Refugees
+<dialog> The five sovereign Lords and their Emperor have made life unlivable for us common folk.  So we have all come here to this last free stronghold.  We're not strong enough to fight the Empire, but maybe its enough to survive...
+</message>
+<message> Stone Circle
+<dialog> These Rune Gateways used to be very common throughout the five realms.  We used to use them to travel great distances instantly.  Now, many of them are no longer functioning.  This one looks like it could be repaired, but its missing a Gate Stone.
+</message>
+<message> Repair
+<dialog> If you find a Gate Stone.  Bring it back here and use it on the gateway to reactivate it.
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> townguard
+<monster> townguard
+<questlist>
+</questlist>
+<shoplist>
+</shoplist>
+<dialoglist>
+</dialoglist>
+</NPC>
+
+<NPC> peasant1
+<monster> peasant1
+<questlist>
+</questlist>
+<shoplist>
+</shoplist>
+<dialoglist>
+</dialoglist>
+</NPC>
+
+<NPC> peasant2
+<monster> peasant2
+<questlist>
+</questlist>
+<shoplist>
+</shoplist>
+<dialoglist>
+</dialoglist>
+</NPC>
+
+<NPC> Chief
+<monster> thief
+<questlist>
+<quest> Silver Chalice
+<qdesc> I happen to know that there is a certain rare chalice in the Inn's stock room.  If you can acquire that for us, there is a decent reward.
+<win> return Silver Chalice
+<offer> item Membership Card
+<reward> gold 100
+</quest>
+</questlist>
+<shoplist>
+<item> Membership Card
+<markup> 1
+<type> item
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Hello.  I am the chief of this guilds.  How can we be of service?
+</message>
+<message> Ask About Guild
+<dialog> As a guild for thieves we make sure that there is no un-authorized theft and out members don't make too much noise.
+</message>
+<message> Membership
+<dialog> If you purchase a membership card, you will be able to fence goods that you have.. acquired.  Talk to Jimmy about that.
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> Jimmy
+<monster> thief
+<questlist>
+</questlist>
+<shoplist>
+<item> Lock Picks
+<markup> 1
+<condition> item Membership Card
+<type> item
+</item>
+<item> Purse Cutter
+<condition> item Membership Card
+<markup> 1
+<type> item
+</item>
+<item> Grappling Hook
+<condition> item Membership Card
+<markup> 1
+<type> item
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Hello.  I operate as the fence for this guild.
+</message>
+<message> Ask About Fencing
+<dialog> Not like sword fighting.  A fence finds ways of finding buyers for our ill gotten gains.
+</message>
+<message> Reward
+<dialog> There are some particular rare and legendary items that I could fetch you a fair price if you bring em here.  After the guild's reasonable cut, of course.
+</message>
+<message> Membership
+<dialog> Fencing services are for card carrying members of the guild only.
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> Rory
+<monster> thief
+<questlist>
+</questlist>
+<shoplist>
+<item> Lock Picking
+<condition> item Membership Card
+<markup> 1
+<type> skill
+</item>
+<item> Pocket Picking
+<condition> item Membership Card
+<markup> 1
+<type> skill
+</item>
+<item> Haggling
+<condition> item Membership Card
+<markup> 1
+<type> skill
+</item>
+<item> Trap Sensing
+<condition> item Membership Card
+<markup> 1
+<type> skill
+</item>
+<item> Trap Disarming
+<condition> item Membership Card
+<markup> 1
+<type> skill
+</item>
+<item> Wall Tap
+<condition> item Membership Card
+<markup> 1
+<type> skill
+</item>
+<item> Secret Sight
+<condition> item Membership Card
+<markup> 1
+<type> skill
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Hello, I am the Thieves Guild Skill Master.  You can call me Rory.  I can teach you all the tricks of the trade... For a price.
+</message>
+<message> Skills
+<dialog> You must have some skills to have gotten here in the first place, but I recon I can still teach you some more.
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> thief
+<monster> thief
+<questlist>
+</questlist>
+<shoplist>
+</shoplist>
+<dialoglist>
+</dialoglist>
+</NPC>
+
+<NPC> Philip
+<monster> thief
+<questlist>
+</questlist>
+<shoplist>
+<item> Wood Arrow
+<markup> 1
+<type> item
+</item>
+<item> Throwing Knife
+<markup> 1
+<type> item
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Hello Traveller, can I interest you in some wares?
+</message>
+<message> Ask About Wares
+<dialog> I offer some common tools.  Very useful for the novice adventurer.
+</message>
+<message> Tips
+<dialog> If you are like me, you will watch out for shadows and stick to them.  Much safer and you never know what you will find.
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> Jeb
+<monster> alchemist
+<questlist>
+</questlist>
+<shoplist>
+<item> Healing Salve
+<markup> 1
+<type> item
+</item>
+<item> Herbal Base
+<markup> 1
+<type> item
+</item>
+<item> Powder Bomb
+<markup> 1
+<type> item
+</item>
+<item> Mana Vial
+<markup> 1
+<type> item
+</item>
+<item> Healing Salve
+<markup> 1
+<type> spell
+</item>
+<item> Powder Bomb
+<markup> 1
+<type> spell
+</item>
+<item> Quick Lightning
+<markup> 1
+<type> spell
+</item>
+<item> Hard Armor
+<markup> 1
+<type> spell
+</item>
+<item> Vacuum Bomb
+<markup> 1
+<type> spell
+</item>
+<item> Flame Blade
+<markup> 1
+<type> spell
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Howdy, I am Jeb, the town apothecary.
+</message>
+<message> Ask About Services
+<dialog> I sell salves and basic alchemy components.  I will also teach those willing how to make them.
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> Gohan
+<monster> peasant1
+<questlist>
+</questlist>
+<shoplist>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Thank you for saving me.  I thought I was dead for sure.
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> Lucien
+<monster> priest
+<questlist>
+<quest> Old Stick
+<qdesc> there is an odd old stick somewhere that I am sure could be used as a relic.  Bring it to me.
+<win> return stick
+<offer> alignment > 5
+<reward> item Wood Relic
+<reward> grace 50
+</quest>
+<quest> Missing Apprentice
+<qdesc> My apprentice has gone missing.  In his eagerness to fight evil, he has gone into the tunnels to the fight the undead.  It has been several days and I fear for the worst.
+<win> save tunnels01.lvl Gohan
+<reward> grace 50
+<reward> item Ring of Undead Resistance
+</quest>
+</questlist>
+<shoplist>
+<item> Heal
+<markup> 1
+<type> spell
+</item>
+<item> Purge
+<markup> 1
+<type> spell
+</item>
+<item> Bless
+<markup> 1
+<type> Curse
+</item>
+<item> Purge
+<markup> 1
+<type> spell
+</item>
+<item> Bane
+<markup> 1
+<type> spell
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Welcome Traveller, I am Lucien, the priest of this settlement.
+</message>
+<message> The Alter
+<dialog> At an alter, one can pray to God and dedicate ones deeds to the Almighty.  The Almighty may see fit to bestow the weak with some favor.  Of course those who prove themselves capable will find the true Lord more giving.
+</message>
+<message> Ask About Services
+<dialog> For those who are of the mind and spirit I can teach them to invoke the power of God.
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> Rooter
+<monster> knight
+<questlist>
+<quest> Disturbed Undead
+<qdesc> There is a large zombie in the tunnels making the other undead restless.  Please Kill it.
+#     Kill Where   Id Number
+<win> kill tunnels01.lvl 28
+<reward> gold 100
+<reward> grace 50
+</quest>
+</questlist>
+<shoplist>
+<item> Vital Strike
+<markup> 1
+<type> skill
+</item>
+<item> Body Control
+<markup> 1
+<type> skill
+</item>
+<item> Footwork
+<markup> 1
+<type> skill
+</item>
+<item> Shield Fighting
+<markup> 1
+<type> skill
+</item>
+<item> Heavy Weapons
+<markup> 1
+<type> skill
+</item>
+<item> Guard Breaking
+<markup> 1
+<type> skill
+</item>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> Ho Traveller!  I am Rooter, the head of the adventurer's guild!
+</message>
+<message> Ask About Services
+<dialog> We offer quests for the daring and training for the willing.
+</message>
+<message> Ask About Combat
+<dialog> Have you tried to use your weapon's alternate method of attack?  Some attacks are more effective versus different types of monsters or tactics.
+</message>
+<message> Ask About The Tunnels
+<dialog> When we took over this abandoned keep, we discovered some tunnels that ran beneath it.  Not much of use down there, but watch out for some weak undead.  We suggest the townsfolk stear clear.
+</message>
+<message> Ask About Adventurers
+<dialog> Ahh, those who seek fame and glory in the good services of the people.  Those are are adventurers.  If you keep your wits about you, you will discover plenty of adventure around these parts.
+</message>
+</dialoglist>
+</NPC>
+
+<NPC> Gate Keeper
+<monster> wizard
+<questlist>
+</questlist>
+<shoplist>
+</shoplist>
+<dialoglist>
+<message> Greeting
+<dialog> You are the first I have seen here in quite some time.  Welcome.
+</message>
+<message> Ask About This Place
+<dialog> This is the crossroads of the five realms.  Each of these cursed lands is connected through here.
+</message>
+<message> Ask About The Center Gateway
+<dialog> The center leads to the ancient summit, what is now the settlement you can from.
+</message>
+<message> Ask About The 5 Gateways
+<dialog> This one leads to Atlantis, to my left the land of Ys, then Avalon, Mu and finally Lemuria to my right.
+</message>
+<message> Ask About The North Gateway
+<dialog> The one in the north leads to the underworld.  Only one who has attained the 5 Elemental Runes may enter there.
+</message>
+<message> Ask About The South Gateway
+<dialog> The south Gateway leads to kingdom of heaven.  It will only activate when the Dark Lords have been slain.
+</message>
+</dialoglist>
+</NPC>

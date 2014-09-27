@@ -1,0 +1,50 @@
+# Default Tile Set
+
+<tile> Bricks
+<image> images/tiles/bricks01.png
+<shape> 0
+<tileId> 1
+<end>
+
+<tile> Sand
+<image> images/tiles/sand01.png
+<shape> 0
+<tileId> 2
+<end>
+
+<tile> Marble
+<image> images/tiles/marble01.png
+<shape> 0
+<tileId> 3
+<end>
+
+<tile> White Marble
+<image> images/tiles/marble02.png
+<shape> 0
+<tileId> 4
+<end>
+
+<tile> Clay
+<image> images/tiles/sand02.png
+<shape> 0
+<tileId> 5
+<end>
+
+<tile> Wood
+<image> images/tiles/wood01.png
+<shape> 0
+<tileId> 6
+<end>
+
+<tile> Stone
+<image> images/tiles/stone01.png
+<shape> 0
+<tileId> 7
+<end>
+
+<tile> Cracked Stone
+<image> images/tiles/stone02.png
+<shape> 0
+<tileId> 8
+<end>
+

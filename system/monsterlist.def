@@ -1,0 +1,382 @@
+# monster definition file.
+# referred to by the monster spawn object in the map editor
+# chosen by the key monster name.
+<monster> peasant1
+<sprite> images/models/peasant1.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 50 20 0
+<grace> 5
+<gold> 0
+<goldchance> 5
+<tendency> -1
+<alignment> -4
+<sightrange> 80
+<sightdist> 180
+<darksight> 0.5
+# lower is faster
+<attackspeed> 1.4
+# higher is faster
+<movespeed> 0.8
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> slash 10 24
+# up to 4
+<end>
+
+<monster> peasant2
+<sprite> images/models/peasant2.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 50 20 0
+<grace> 5
+<gold> 0
+<goldchance> 5
+<tendency> -1
+<alignment> -4
+<sightrange> 80
+<sightdist> 180
+<darksight> 0.5
+# lower is faster
+<attackspeed> 1.4
+# higher is faster
+<movespeed> 0.8
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> slash 10 24
+# up to 4
+<end>
+
+<monster> townguard
+<sprite> images/models/knight.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 80 20 0
+<grace> 5
+<gold> 5
+<goldchance> 5
+<tendency> -1
+<alignment> 4
+<sightrange> 80
+<sightdist> 180
+<darksight> 0.5
+# lower is faster
+<attackspeed> 1.4
+# higher is faster
+<movespeed> 0.9
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> slash 25 24
+# up to 4
+<drop> Healing Salve
+<droprate> 0.2
+<end>
+
+<monster> knight
+<sprite> images/models/knight.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 100 20 0
+<grace> 15
+<gold> 10
+<goldchance> 50
+<tendency> -2
+<alignment> 4
+<sightrange> 80
+<sightdist> 180
+<darksight> 0.5
+# lower is faster
+<attackspeed> 1.4
+# higher is faster
+<movespeed> 0.9
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> crush 40 24
+# up to 4
+<drop> Healing Salve
+<droprate> 0.1
+<end>
+
+<monster> heavyknight
+<sprite> images/models/heavy_knight.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 150 20 0
+<grace> 5
+<gold> 10
+<goldchance> 5
+<tendency> -1
+<alignment> 4
+<sightrange> 80
+<sightdist> 180
+<darksight> 0.5
+# lower is faster
+<attackspeed> 1.6
+# higher is faster
+<movespeed> 0.7
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> slash 60 28
+# up to 4
+<drop> Healing Salve
+<droprate> 0.1
+<end>
+
+<monster> archer
+<sprite> images/models/archer.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 60 30 0
+<grace> 5
+<gold> 10
+<goldchance> 15
+<tendency> -1
+<alignment> -4
+<sightrange> 90
+<sightdist> 280
+<darksight> 0.8
+# lower is faster
+<attackspeed> 1.2
+# higher is faster
+<movespeed> 1
+<nearactions> FGGFGGF
+<faractions> 1
+# up tp 2
+# action damage range
+<actions> shoot 40 240
+# up to 4
+<drop> Wood Arrow
+<droprate> 0.5
+<end>
+
+<monster> thief
+<sprite> images/models/thief.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 70 30 0
+<grace> 5
+<gold> 10
+<goldchance> 15
+<tendency> -1
+<alignment> -4
+<sightrange> 90
+<sightdist> 180
+<darksight> 0.8
+# lower is faster
+<attackspeed> 1
+# higher is faster
+<movespeed> 1
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> stab 40 24
+# up to 4
+<drop> Throwing Knife
+<droprate> 0.5
+<end>
+
+<monster> priest
+<sprite> images/models/priest.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 60 30 0
+<grace> 5
+<gold> 10
+<goldchance> 15
+<tendency> -5
+<alignment> -4
+<sightrange> 90
+<sightdist> 180
+<darksight> 0.8
+# lower is faster
+<attackspeed> 1.2
+# higher is faster
+<movespeed> 0.9
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> bash 40 24
+# up to 4
+<end>
+
+<monster> alchemist
+<sprite> images/models/alchemist.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 60 30 0
+<grace> 5
+<gold> 10
+<goldchance> 15
+<tendency> -5
+<alignment> -4
+<sightrange> 90
+<sightdist> 180
+<darksight> 0.8
+# lower is faster
+<attackspeed> 1.2
+# higher is faster
+<movespeed> 0.9
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> bash 40 24
+# up to 4
+<end>
+
+<monster> wizard
+<sprite> images/models/wizard.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 60 30 40
+<grace> 5
+<gold> 10
+<goldchance> 15
+<tendency> -5
+<alignment> -4
+<sightrange> 90
+<sightdist> 180
+<darksight> 0.8
+# lower is faster
+<attackspeed> 1.3
+# higher is faster
+<movespeed> 0.9
+<nearactions> 1GG1GG1
+<faractions> 2
+# up tp 2
+# action damage range
+<actions> stab 40 24
+<actions> cast Force Bolt
+# up to 4
+<end>
+
+<monster> Skeleton
+<sprite> images/models/skeleton.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 40 20 0
+<grace> 5
+<gold> 5
+<goldchance> 5
+<tendency> -1
+<alignment> 4
+<sightrange> 80
+<sightdist> 180
+<darksight> 0.5
+# lower is faster
+<attackspeed> 1.4
+# higher is faster
+<movespeed> 1
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> slash 35 24
+# up to 4
+<drop> Bone Fragment
+<droprate> 0.2
+<end>
+
+<monster> SkeletonArcher
+<sprite> images/models/SkeletonArcher.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 40 20 0
+<grace> 5
+<gold> 5
+<goldchance> 5
+<tendency> -1
+<alignment> 4
+<sightrange> 80
+<sightdist> 180
+<darksight> 0.5
+# lower is faster
+<attackspeed> 1.4
+# higher is faster
+<movespeed> 1
+<nearactions> F
+<faractions> 1
+# up tp 2
+# action damage range
+<actions> shoot 25 200
+# up to 4
+<drop> Wood Arrow
+<droprate> 0.5
+<end>
+
+<monster> Zombie
+<sprite> images/models/zombie.png
+<spritesize> 128 128
+<scale> 1.2
+<radius> 18
+<hsm> 80 40 0
+<grace> 15
+<gold> 5
+<goldchance> 15
+<tendency> 2
+<alignment> 4
+<sightrange> 80
+<sightdist> 180
+<darksight> 0.5
+# lower is faster
+<attackspeed> 1.3
+# higher is faster
+<movespeed> 1
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> stab 50 24
+# up to 4
+<drop> Poison Salve
+<droprate> 0.2
+<end>
+
+<monster> Summon Skeleton
+<sprite> images/models/skeleton.png
+<spritesize> 128 128
+<scale> 1
+<radius> 13
+<hsm> 40 20 0
+<goldchance> 5
+<tendency> -1
+<alignment> 4
+<sightrange> 80
+<sightdist> 180
+<darksight> 1
+# lower is faster
+<attackspeed> 1.4
+# higher is faster
+<movespeed> 1
+<nearactions> 1GG1GG1
+<faractions> N
+# up tp 2
+# action damage range
+<actions> stab 25 24
+# up to 4
+<end>
+

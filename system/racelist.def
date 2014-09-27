@@ -1,0 +1,28 @@
+# Player Race Definitions
+# 
+# Attributes Str End Dex Agi Foc Spi
+
+<race> Atlantean
+<attributes> 2 0 -2 0 2 -1
+<alignment> -2 2
+<end>
+
+<race> Muan
+<attributes> 2 0 -1 0 -2 2
+<alignment> 0 0
+<end>
+
+<race> Avalonian
+<attributes> 0 2 0 -1 -2 2
+<alignment> 2 -2
+<end>
+
+<race> Ysean
+<attributes> -1 -2 0 2 0 2
+<alignment> -2 -2
+<end>
+
+<race> Lemurian
+<attributes> -2 -1 2 0 2 0
+<alignment> 2 2
+<end>

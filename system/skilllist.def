@@ -1,0 +1,162 @@
+# skill list
+# cost H S M Bodies Alchemy Herb
+
+# Mage Skill
+
+<spell> Magical Focus
+<type> mage
+<price> 0
+<cost> 0 0 0 0 0 0
+<special> Focus
+<special> Spirit
+<end>
+
+# Combat Skills
+
+<spell> Parry
+<type> combat
+<price> 300
+<cost> 0 5 0 0 0 0
+<special> parry
+<special> Dexterity
+<end>
+
+<spell> Vital Strike
+<type> combat
+<price> 600
+<cost> 0 5 0 0 0 0
+<special> critial
+<special> Dexterity
+<end>
+
+<spell> Body Control
+<type> combat
+<price> 600
+<cost> 0 5 0 0 0 0
+<special> Endurance
+<special> Agility
+<end>
+
+<spell> Reposte
+<type> combat
+<price> 600
+<cost> 0 5 0 0 0 0
+<special> reposte
+<special> Dexterity
+<end>
+
+<spell> Footwork
+<type> combat
+<price> 600
+<cost> 0 -5 0 0 0 0
+<special> Agility
+<end>
+
+<spell> Guard Breaking
+<type> combat
+<price> 600
+<cost> 0 5 0 0 0 0
+<special> Strength
+<special> Dexterity
+<end>
+
+<spell> Heavy Weapons
+<type> combat
+<price> 600
+<cost> 0 5 0 0 0 0
+<special> Strength
+<end>
+
+<spell> Shield Fighting
+<price> 600
+<type> combat
+<cost> 0 5 0 0 0 0
+<special> deflect
+<special> bash
+<special> Agility
+<special> Endurance
+<end>
+
+# Rogue Skills
+
+<spell> Climbing
+<price> 400
+<type> rogue
+<cost> 0 1 0 0 0 0
+<special> Agility
+<special> Strength
+<end>
+
+<spell> Stealth
+<price> 500
+<type> rogue
+<cost> 0 15 0 0 0 0
+<special> Agility
+<end>
+
+<spell> Haggling
+<price> 1000
+<type> rogue
+<cost> 0 1 0 0 0 0
+<special> Focus
+<special> Spirit
+<end>
+
+<spell> Lock Picking
+<price> 300
+<type> rogue
+<cost> 0 1 0 0 0 0
+<special> Dexterity
+<end>
+
+<spell> Pocket Picking
+<price> 300
+<type> rogue
+<cost> 0 1 0 0 0 0
+<special> Dexterity
+<end>
+
+<spell> Back Attack
+<type> rogue
+<price> 300
+<cost> 0 5 0 0 0 0
+<special> critial
+<special> Dexterity
+<end>
+
+<spell> Knife Throwing
+<price> 400
+<type> rogue
+<cost> 0 5 0 0 0 0
+<special> Dexterity
+<end>
+
+<spell> Trap Sensing
+<price> 300
+<type> rogue
+<cost> 0 0 0 0 0 0
+<special> Focus
+<special> Spirit
+<end>
+
+<spell> Trap Disarming
+<price> 1000
+<type> rogue
+<cost> 0 20 0 0 0 0
+<special> Dexterity
+<special> Focus
+<end>
+
+<spell> Secret Sight
+<price> 1200
+<type> rogue
+<cost> 0 0 0 0 0 0
+<special> Focus
+<end>
+
+<spell> Wall Tap
+<price> 1200
+<type> rogue
+<cost> 0 0 0 0 0 0
+<special> Focus
+<end>

@@ -1,0 +1,265 @@
+# spell list
+# cost H S M Bodies Alchemy Herb
+
+<spell> Force Bolt
+<price> 300
+<icon> images/effects/forcebolt.png
+<sprite> images/effects/forcebolt.png
+<type> magic
+<cost> 0 0 6 0 0 0
+<range> 100
+<special> projectile
+<special> damage light
+<special> push
+<special> color 0.2 0.5 0.9
+<end>
+
+<spell> Magic Shield
+<price> 400
+<icon> images/icons/magic_shield.png
+<sprite> images/effects/magic_shield.png
+<type> magic
+<cost> 0 0 6 0 0 0
+<special> protection physical light
+<end>
+
+<spell> Flame Bolt
+<price> 400
+<icon> images/effects/flamebolt.png
+<sprite> images/effects/flamebolt.png
+<type> magic
+<range> 100
+<cost> 0 0 5 0 0 0
+<special> projectile
+<special> damage light
+<special> fire
+<special> color 0.9 0.7 0.2
+<end>
+
+<spell> Resistance
+<price> 800
+<icon> images/icons/resistance.png
+<sprite> images/effects/resistance.png
+<type> magic
+<range> 1
+<cost> 0 0 10 0 0 0
+<special> protection resfire light
+<special> protection resmagic light
+<special> protection resshadow light
+<special> protection reslight light
+<end>
+
+<spell> Sunburst
+<price> 800
+<icon> images/icons/holystorm.png
+<type> magic
+<range> 1
+<cost> 0 0 20 0 0 0
+<special> radius light
+<special> damage fire light
+<special> damage holy light
+<special> color 0.95 0.95 0.9
+<end>
+
+<spell> Shadow Flare
+<price> 800
+<icon> images/effects/shadowflare.png
+<sprite> images/effects/shadowflare.png
+<type> magic
+<range> 1
+<cost> 0 0 20 0 0 0
+<special> projectile
+<special> damage shadow light
+<special> damage magic light
+<special> radius light
+<special> color 0.5 0.0 0.6
+<end>
+
+<spell> Fire Rain
+<price> 800
+<icon> images/icons/firestorm.png
+<type> magic
+<range> 1
+<cost> 0 0 20 0 0 0
+<special> damage fire medium
+<special> range light
+<special> radius light
+<special> color 0.9 0.7 0.2
+<end>
+
+<spell> Tornado
+<price> 800
+<icon> images/icons/tornado.png
+<type> magic
+<range> 1
+<cost> 0 0 20 0 0 0
+<special> spawn Tornado
+<special> range light
+<special> radius light
+<special> color 0.6 0.6 0.6
+<end>
+
+<spell> Heal
+<icon> images/icons/heal.png
+<type> favor
+<price> 300
+<cost> 0 0 8 0 0 0
+<special> heal light
+<end>
+
+<spell> Purge
+<price> 400
+<icon> images/icons/purge.png
+<type> favor
+<cost> 0 0 10 0 0 0
+<special> purge light
+<end>
+
+<spell> Bless
+<price> 400
+<icon> images/icons/bless.png
+<type> favor
+<cost> 0 0 20 0 0 0
+<special> bless light
+<end>
+
+<spell> Curse
+<price> 400
+<icon> images/icons/curse.png
+<type> favor
+<cost> 0 0 20 0 0 0
+<special> curse light
+<end>
+
+<spell> Bane
+<price> 400
+<icon> images/icons/confusion.png
+<type> favor
+<cost> 0 0 40 0 0 0
+<special> bane light
+<end>
+
+
+<spell> Summon Skeleton
+<icon> images/effects/dexterity.png
+<price> 500
+<type> necromancy
+<range> 100
+<cost> 0 0 10 1 0 0
+<special> summon skeleton
+<special> timedlife
+<end>
+
+<spell> Shadow Bolt
+<price> 300
+<icon> images/effects/shadowflare.png
+<type> necromancy
+<range> 100
+<cost> 0 0 5 0 0 0
+<special> projectile
+<special> damage light
+<special> shadow
+<special> color 0.5 0.0 0.6
+<end>
+
+#
+#  Alchemy Section
+#
+
+<spell> Healing Salve
+<price> 300
+<icon> images/effects/potionthrown_r.png
+<type> alchemy
+<cost> 0 0 2 0 1 0
+<end>
+
+<spell> Healing Potion
+<price> 800
+<icon> images/effects/potionthrown_r.png
+<type> alchemy
+<cost> 0 0 10 0 0 1
+<end>
+
+<spell> Powder Bomb
+<price> 800
+<icon> images/effects/potionthrown_y.png
+<type> alchemy
+<cost> 0 0 10 0 0 1
+<end>
+
+<spell> Black Cloud
+<price> 800
+<icon> images/effects/potionthrown_k.png
+<type> alchemy
+<cost> 0 0 10 0 0 1
+<end>
+
+<spell> Flame Blade
+<price> 1000
+<icon> images/icons/redmagicsword.png
+<type> alchemy
+<cost> 0 0 15 0 0 1
+<end>
+
+<spell> Mana Vial
+<price> 600
+<icon> images/effects/potionthrown.png
+<type> alchemy
+<cost> 0 0 4 0 1 1
+<end>
+
+<spell> Purge Salve
+<price> 400
+<icon> images/effects/potionthrown_g.png
+<type> alchemy
+<cost> 0 0 4 0 1 0
+<end>
+
+<spell> Quick Lightning
+<price> 400
+<icon> images/icons/lightningstorm.png
+<type> alchemy
+<cost> 0 0 4 0 1 0
+<end>
+
+<spell> Hard Armor
+<price> 400
+<icon> images/icons/magicshield.png
+<type> alchemy
+<cost> 0 0 4 0 1 0
+<end>
+
+<spell> Vacuum Bomb
+<price> 400
+<icon> images/icons/tornado.png
+<type> alchemy
+<cost> 0 0 4 0 1 0
+<end>
+
+<spell> Cure Pills
+<price> 400
+<icon> images/effects/potionthrown_g.png
+<type> alchemy
+<cost> 0 0 4 0 1 0
+<end>
+
+<spell> Vacuum Jar
+<price> 1000
+<icon> images/icons/tornado.png
+<type> alchemy
+<cost> 0 0 15 0 0 1
+<end>
+
+<spell> Shadow Potion
+<price> 1
+<icon> images/icons/shadowflare.png
+<type> alchemy
+<cost> 0 0 20 0 0 2
+<end>
+
+<spell> Holy Flash
+<price> 1
+<icon> images/icons/radiance.png
+<type> alchemy
+<cost> 0 0 20 0 0 2
+<end>

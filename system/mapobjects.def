@@ -1,0 +1,140 @@
+# this file will define the objects that can appear in the map editor and  how to draw them.
+# this list will help to populate the map file with object data.
+
+<object> playerstart
+<model> images/models/testman.png
+<size> 64 64
+<scale> 1
+<end>
+
+<object> monster
+<model> images/models/testmonster.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> npc
+<model> images/models/testnpc.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> hostage
+<model> images/models/hostage.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> stairsup
+<model> images/models/stairs_up.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> stairsdown
+<model> images/models/stairs_down.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> v_door
+<model> images/models/door_v_closed.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> h_door
+<model> images/models/door_h_closed.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> chest
+<model> images/models/chest.png
+<size> 48 48
+<scale> 1
+<end>
+
+<object> gateway
+<model> images/models/gateway.png
+<size> 96 96
+<scale> 0.67
+<end>
+
+<object> alter
+<model> images/models/alter.png
+<size> 64 64
+<scale> 1
+<end>
+
+<object> daylight
+<model> images/UI/outside.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> pathblocker
+<model> images/models/blocker.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> floorswitch
+<model> images/models/button_switch.png
+<size> 56 56
+<scale> 1
+<end>
+
+<object> trap
+<model> images/models/trap.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> climbable
+<model> images/effects/climbable.png
+<size> 62 62
+<scale> 1
+<end>
+
+<object> levelexit
+<model> images/effects/levelexit.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> bench
+<model> images/models/bench.png
+<size> 48 48
+<scale> 1
+<end>
+
+<object> barrel
+<model> images/models/barrel.png
+<size> 48 48
+<scale> 1
+<end>
+
+<object> infotag
+<model> images/UI/info_tag.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> playerinfotag
+<model> images/UI/player_info_tag.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> itemdrop
+<model> images/models/item_pickup2.png
+<size> 32 32
+<scale> 1
+<end>
+
+<object> deadbody
+<model> images/models/deadbody2.png
+<size> 128 128
+<scale> 1
+<end>

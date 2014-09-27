@@ -1,0 +1,204 @@
+# Training Classes
+#
+
+#<class> Guardian
+#<attributes> 12 16 6 8 4 10
+#<alignment> 2 -1
+#<skill> Shield Fighter
+#<head> Plate Helm
+#<body> Plate Mail
+#<legs> Plate Greeves
+#<neck> Heavy Cloak
+#<primary> Pike
+#<secondary> Heater Shield
+#<tool> Healing Salve
+#<item> 2 Healing Salve
+#<end>
+
+<class> Hunter
+<attributes> 16 10 12 8 6 4
+<alignment> -1 1
+<skill> Vital Strike
+<head> Chain Coif
+<body> Chain Mail
+<legs> Chain Leggings
+<neck> Heavy Cloak
+<primary2> Short Bow
+<primary> Short Sword
+<secondary> Kite Shield
+<arrow> Wood Arrow
+<tool> Healing Salve
+<item> 9 Wood Arrow
+<item> 2 Healing Salve
+<end>
+
+<class> Rogue
+<attributes> 7 7 16 12 8 6
+<alignment> -1 1
+<skill> Lock Picking
+<skill> Knife Throwing
+<skill> Back Attack
+<skill> Climbing
+<primary> Dagger
+<secondary> Buckler
+<head> Leather Hood
+<body> Leather Armor
+<legs> Leather Boots
+<neck> Leather Cape
+<tool> Throwing Knife
+<item> 1 Lock Picks
+<item> 3 Healing Salve
+<item> 4 Throwing Knife
+<end>
+
+#<class> Brigand
+#<attributes> 12 8 10 16 6 4
+#<alignment> -1 1
+#<skill> Climbing
+#<skill> Back Attack
+#<skill> Stealth
+#<head> Brigandine Hood
+#<body> Brigandine Armor
+#<legs> Brigandine Boots
+#<neck> Brigandine Cape
+#<primary> Club
+#<primary2> Short Bow
+#<secondary> Boss Shield
+#<arrow> Wood Arrow
+#<tool> Healing Salve
+#<item> 9 Wood Arrow
+#<item> 2 Healing Salve
+#<end>
+
+#<class> Mage Knight
+#<attributes> 14 8 9 6 13 6
+#<skill> Parry
+#<alignment> -1 1
+#<head> Acolyte Hood
+#<body> Chain Mail
+#<legs> Chain Leggings
+#<neck> Acolyte Cape
+#<spell> Flame Bolt
+#<skill> Parry
+#<primary> Rapier
+#<secondary> Wand
+#<secondary2> Boss Shield
+#<tool> Healing Salve
+#<item> 2 Healing Salve
+#<end>
+
+<class> Wizard
+<attributes> 5 6 12 8 17 6
+<alignment> -1 1
+<head> Acolyte Hood
+<body> Acolyte Mantle
+<legs> Acolyte Boots
+<neck> Acolyte Cape
+<skill> Magic Focus
+<spell> Flame Bolt
+<spell> Magic Shield
+<spell> Sunburst
+<spell> Shadow Flare
+<primary> Short Spear
+<secondary> Wand
+<secondary2> Boss Shield
+<tool> Healing Salve
+<item> 2 Healing Salve
+<item> 3 Mana Vial
+<end>
+
+#<class> Necromancer
+#<attributes> 7 8 10 8 16 9
+#<alignment> -1 1
+#<head> Master Hood
+#<body> Master Mantle
+#<legs> Master Boots
+#<neck> Master Cape
+#<spell> Shadow Bolt
+#<spell> Summon Skeleton
+#<primary> Fauchard
+#<secondary> Wood Shield
+#<secondary2> Ivory Wand
+#<tool> Healing Salve
+#<item> 2 Healing Salve
+#<item> 5 Bone Fragment
+#<end>
+
+<class> Alchemist
+<attributes> 6 6 12 8 15 6
+<alignment> -1 1
+<head> Apprentice Hood
+<body> Apprentice Mantle
+<legs> Apprentice Boots
+<neck> Apprentice Cape
+<spell> Healing Salve
+<spell> Purge Salve
+<spell> Powder Bomb
+<primary> Hand Axe
+<secondary> White Stone
+<secondary2> Boss Shield
+<tool> Healing Salve
+<item> 2 Healing Salve
+<item> 5 Herbal Base
+<end>
+
+<class> Curate
+<attributes> 8 12 6 9 4 17
+<alignment> -1 1
+<head> Sage Hood
+<body> Sage Mantle
+<legs> Sage Boots
+<neck> Sage Cape
+<spell> Heal
+<spell> Purge
+<primary> Mace
+<secondary2> Wood Shield
+<secondary> Wood Relic
+<tool> Healing Salve
+<item> 2 Healing Salve
+<end>
+
+#<class> Shaman
+#<attributes> 6 8 11 6 11 12
+#<alignment> -1 1
+#<spell> Purge Salve
+#<spell> Heal
+#<head> Sage Hood
+#<body> Sage Mantle
+#<legs> Sage Boots
+#<neck> Acolyte Cape
+#<primary> Short Spear
+#<secondary> Wood Relic
+#<secondary2> White Stone
+#<tool> Healing Salve
+#<item> 2 Healing Salve
+#<item> 3 Herbal Base
+#<end>
+
+# this is the class given for the tutorial
+# this MUST appear last in this file
+<class> Tutorial
+<attributes> 5 6 12 8 17 6
+<alignment> -1 1
+#<head> Plate Helm
+#<body> Plate Mail
+#<legs> Plate Greeves
+#<neck> Heavy Cloak
+<spell> Flame Bolt
+<spell> Magic Shield
+<spell> Healing Salve
+<spell> Powder Bomb
+<skill> Lock Picking
+<primary> Long Sword
+<primary2> Long Bow
+<secondary> Kite Shield
+<secondary2> Wand
+<arrow> Wood Arrow
+<tool> Healing Salve
+<item> 2 Healing Salve
+<item> 3 Mana Vial
+<item> 5 Herbal Base
+<item> 4 Throwing Knife
+<item> 9 Wood Arrow
+<end>
+
