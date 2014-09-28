@@ -245,10 +245,10 @@ void SpawnTrap(int x, int y,float r,Object *obj)
   Progress *p;
   Entity *self;
   if(obj == NULL)return;
-  p = GetProgressByNameIndexMap(level.name,self->name,obj->id);
-  if((p != NULL)&&(strcmp(p->value,"disabled")==0))return;
   self = NewEntity();
   if(self == NULL)return;
+  p = GetProgressByNameIndexMap(level.name,self->name,obj->id);
+  if((p != NULL)&&(strcmp(p->value,"disabled")==0))return;
   memcpy(self->data,obj->data,sizeof(obj->data));
   self->objindex = obj->id;
   self->radius = TILEW/2 - 0.2;
@@ -1893,7 +1893,10 @@ void RemoveEntityFromSpace(Entity *ent)
   if(ent->shape == NULL)return;
   space = GetLevelSpace();
   if(space == NULL)return;
-  if(ent->shape->body != NULL)cpSpaceRemoveBody(space, ent->shape->body);
+  if((ent->shape->body != NULL) && (cpSpaceContainsBody(space,ent->shape->body)))
+  {
+      cpSpaceRemoveBody(space, ent->shape->body);
+  }
   /*cpSpaceRemoveShape(space, ent->shape);*/
 }
 

@@ -1,18 +1,51 @@
-#ifndef _INITGL_
-#define _INITGL_
+#ifndef _EOL_OPENGL_
+#define _EOL_OPENGL_
+
+/*
+    Copyright 2012 Engineer of Lies
+    This file is part of the Engine of Lies game engine library
+
+    The Engine of Lies (EOL) is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    EOL is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with the EOL game engine.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/**
+  @purpose This file is intended to define openGL constants if they are not
+  already available with the installed opengl libraries.
+*/
+
+/*
+The Z value of the 2D plane, a range of 0 to 1
+0 = the near Z
+1 = the far Z
+*/
+#define EOL_2DPLANE_    0.99f
 
 #if defined(_WIN32)
 #include <windows.h>
 #endif
-#ifdef __APPLE__
+#if defined(__APPLE__)
 #include <OpenGL/gl.h>    
 #include <OpenGL/glu.h>
-#endif
+#else
 #include <GL/gl.h>    
 #include <GL/glu.h>
+#endif
 
 #if defined(_WIN32)
 #include <glext.h>
+#elif defined(__APPLE__)
+#include <OpenGL/glext.h>
 #else
 #include <GL/glx.h>
 #include <GL/glxext.h>
@@ -467,6 +500,7 @@ typedef ptrdiff_t GLsizeiptr;
 
 #endif
 
+#ifndef __APPLE__
 typedef void (APIENTRY * PFNGLGENQUERIESPROC) (GLsizei n, GLuint *ids);
 typedef void (APIENTRY * PFNGLDELETEQUERIESPROC) (GLsizei n, const GLuint *ids);
 typedef GLboolean (APIENTRY * PFNGLISQUERYPROC) (GLuint id);
@@ -506,7 +540,7 @@ extern PFNGLMAPBUFFERPROC                         glMapBuffer;
 extern PFNGLUNMAPBUFFERPROC                       glUnmapBuffer;
 extern PFNGLGETBUFFERPARAMETERIVPROC              glGetBufferParameteriv;
 extern PFNGLGETBUFFERPOINTERVPROC                 glGetBufferPointerv;
-
+#endif
 /*
   OpenGL 2.0
 */
@@ -602,6 +636,7 @@ typedef char GLchar;
 
 #endif
 
+#ifndef __APPLE__
 typedef void (APIENTRY * PFNGLBLENDEQUATIONSEPARATEPROC) (GLenum modeRGB, GLenum modeAlpha);
 typedef void (APIENTRY * PFNGLDRAWBUFFERSPROC) (GLsizei n, const GLenum *bufs);
 typedef void (APIENTRY * PFNGLSTENCILOPSEPARATEPROC) (GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass);
@@ -636,7 +671,10 @@ typedef void (APIENTRY * PFNGLGETVERTEXATTRIBPOINTERVPROC) (GLuint index, GLenum
 typedef GLboolean (APIENTRY * PFNGLISPROGRAMPROC) (GLuint program);
 typedef GLboolean (APIENTRY * PFNGLISSHADERPROC) (GLuint shader);
 typedef void (APIENTRY * PFNGLLINKPROGRAMPROC) (GLuint program);
-typedef void (APIENTRY * PFNGLSHADERSOURCEPROC) (GLuint shader, GLsizei count, const GLchar* *string, const GLint *length);
+/* Newer GLEXT hack */
+#if GL_GLEXT_VERSION!=85
+typedef void (APIENTRYP PFNGLSHADERSOURCEPROC) (GLuint shader, GLsizei count, const GLchar* const *string, const GLint *length);
+#endif
 typedef void (APIENTRY * PFNGLUSEPROGRAMPROC) (GLuint program);
 typedef void (APIENTRY * PFNGLUNIFORM1FPROC) (GLint location, GLfloat v0);
 typedef void (APIENTRY * PFNGLUNIFORM2FPROC) (GLint location, GLfloat v0, GLfloat v1);
@@ -789,7 +827,7 @@ extern PFNGLVERTEXATTRIB4UBVPROC                  glVertexAttrib4ubv;
 extern PFNGLVERTEXATTRIB4UIVPROC                  glVertexAttrib4uiv;
 extern PFNGLVERTEXATTRIB4USVPROC                  glVertexAttrib4usv;
 extern PFNGLVERTEXATTRIBPOINTERPROC               glVertexAttribPointer;
-
+#endif
 /*
    OpenGL 2.1
 */
@@ -818,6 +856,7 @@ extern PFNGLVERTEXATTRIBPOINTERPROC               glVertexAttribPointer;
 #define GL_SRGB8_ALPHA8                           0x8C43
 #define GL_SRGB_ALPHA                             0x8C42
 
+#ifndef __APPLE__
 typedef void (APIENTRY * PFNGLUNIFORMMATRIX2X3FVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 typedef void (APIENTRY * PFNGLUNIFORMMATRIX3X2FVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 typedef void (APIENTRY * PFNGLUNIFORMMATRIX2X4FVPROC) (GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
@@ -831,6 +870,76 @@ extern PFNGLUNIFORMMATRIX2X4FVPROC                glUniformMatrix2x4fv;
 extern PFNGLUNIFORMMATRIX4X2FVPROC                glUniformMatrix4x2fv;
 extern PFNGLUNIFORMMATRIX3X4FVPROC                glUniformMatrix3x4fv;
 extern PFNGLUNIFORMMATRIX4X3FVPROC                glUniformMatrix4x3fv;
+#endif
+
+/**
+ * @brief sets up opengl for use on this system.
+ */
+void eol_opengl_init();
+
+/**
+ * @brief returns the initialization status of opengl
+ *
+ * @return true if opengl has been initialized, false otherwise
+ */
+GLboolean eol_opengl_is_initialized();
+
+/**
+ * @brief calculate the 3D position for the given 2D position at the depth
+ * provided
+ *
+ * @param x the 2D space x position
+ * @param y the 2D space y position
+ * @param z the depth into 3D space to calculate the projection
+ * @param model the current gl model
+ * @param proj the current gl projection
+ * @param view the current gl view
+ * @param glx the output projected x position in 3D
+ * @param gly the output projected y position in 3D
+ * @param glz the output projected z position in 3D
+ */
+void eol_opengl_get_gl_coordinate(
+  GLint    x,
+  GLint    y,
+  GLdouble z,
+  const GLdouble * model,
+  const GLdouble * proj,
+  const GLint    * view,
+  GLdouble * glx,
+  GLdouble * gly,
+  GLdouble * glz
+  );
+
+/**
+ * @brief calculate the 2D screen coordinates for the given 3D position
+ * @param glx x position in 3D
+ * @param gly y position in 3D
+ * @param glz z position in 3D
+ * @param model the current gl model
+ * @param proj the current gl projection
+ * @param view the current gl view
+ * @param x output the 2D space x position
+ * @param y output he 2D space y position
+ */
+void eol_opengl_get_screen_coordinate(
+  GLdouble glx,
+  GLdouble gly,
+  GLdouble glz,
+  const GLdouble * model,
+  const GLdouble * proj,
+  const GLint    * view,
+  GLint    *x,
+  GLint    *y
+);
+
+/**
+  * @brief returns the smallest bounding power of two
+  *
+  * @param in the number to be bound by a power of two
+  *
+  * @return the smallest power of two greater than in
+ */
+GLint eol_opengl_power_of_two(GLint in);
 
 void InitGlFunctions();
 

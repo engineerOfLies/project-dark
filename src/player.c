@@ -7,6 +7,7 @@
 #include "levelobj.h"
 #include "npcs.h"
 #include "controls.h"
+#include "simple_logger.h"
 
 extern SDL_Rect Camera;
 extern Level level;
@@ -29,7 +30,7 @@ int throwframes[2] = {44,47};
 int deflectframes[2] = {1,6};
 int parryframes[2] = {21,25};
 
-Entity *PlayerEnt;
+Entity *PlayerEnt = NULL;
 PlayerSave PDat;
 Sprite *blackout = NULL;
 LevelHist *ThisLevel = NULL;
@@ -1243,6 +1244,7 @@ void UpdatePlayer(Entity *self)
   ox = self->p.x/TILEW;
   oy = self->p.y/TILEH;
   /* Stat Regen Section */
+  slog("entity: %s position: %f,%f",self->name,self->p.x,self->p.y);
   if(!self->attacking)
   {
     if(self->guard)restfactor *= 0.8;
@@ -1504,6 +1506,7 @@ void SpawnPlayer(Coord p)
   self->UpdateRate = 30;
   self->radius = 10;
   self->takesdamage = 1;
+  slog("spawning player position is: %f,%f",p.x,p.y);
   self->p.x = p.x;
   self->p.y = p.y;
   self->p.z = 0;
@@ -2445,12 +2448,14 @@ void NewPlayer(char race[80],char train[80])
 
 void SetupPlayer(int x,int y)
 {
+  slog("player setup at: (%i,%i)",x,y);
   ThisLevel = GetLevelHistoryByName(level.name);
   if(ThisLevel == NULL)
   {
     ThisLevel = NewLevelHistory(level.name, level.numtiles, level.w, level.h);
     if(ThisLevel == NULL)return;
   }
+  slog("spawning player at: (%i,%i)",x,y);
   SpawnPlayer(M_Coord(x,y,0));
   CalcPlayerResistance();
   UpdateSeenMask(5);

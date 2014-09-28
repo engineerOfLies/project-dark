@@ -1,5 +1,7 @@
 #include "initGL.h"
 
+GLboolean _eol_opengl_initialized = GL_FALSE;
+
 #if defined(_WIN32)
 
 /* OpenGL 1.2.*/
@@ -58,6 +60,7 @@ PFNGLSAMPLECOVERAGEPROC                 glSampleCoverage;
 
 #endif
 
+#ifndef __APPLE__
 /* OpenGL 1.4.*/
 PFNGLBLENDFUNCSEPARATEPROC              glBlendFuncSeparate;
 PFNGLMULTIDRAWARRAYSPROC                glMultiDrawArrays;
@@ -221,7 +224,7 @@ PFNGLUNIFORMMATRIX2X4FVPROC             glUniformMatrix2x4fv;
 PFNGLUNIFORMMATRIX4X2FVPROC             glUniformMatrix4x2fv;
 PFNGLUNIFORMMATRIX3X4FVPROC             glUniformMatrix3x4fv;
 PFNGLUNIFORMMATRIX4X3FVPROC             glUniformMatrix4x3fv;
-
+#endif
 
 void InitGlFunctions()
 {
@@ -288,7 +291,8 @@ void InitGlFunctions()
   glCompressedTexSubImage1D   = (PFNGLCOMPRESSEDTEXSUBIMAGE1DPROC)(GetProc("glCompressedTexSubImage1D"));
   glGetCompressedTexImage     = (PFNGLGETCOMPRESSEDTEXIMAGEPROC)(GetProc("glGetCompressedTexImage"));
 #endif
-    
+
+#ifndef __APPLE__
   /* OpenGL 1.4.*/
   glMultiDrawArrays           = (PFNGLMULTIDRAWARRAYSPROC)(GetProc("glMultiDrawArrays"));
   glMultiDrawElements         = (PFNGLMULTIDRAWELEMENTSPROC)(GetProc("glMultiDrawElements"));
@@ -452,7 +456,57 @@ void InitGlFunctions()
   glUniformMatrix4x2fv        = (PFNGLUNIFORMMATRIX4X2FVPROC)(GetProc("glUniformMatrix4x2fv"));
   glUniformMatrix3x4fv        = (PFNGLUNIFORMMATRIX3X4FVPROC)(GetProc("glUniformMatrix3x4fv"));
   glUniformMatrix4x3fv        = (PFNGLUNIFORMMATRIX4X3FVPROC)(GetProc("glUniformMatrix4x3fv"));
-
+#endif
+    
 #undef GetProc
+  _eol_opengl_initialized = GL_TRUE;
 }
+
+GLboolean eol_opengl_is_initialized()
+{
+	return _eol_opengl_initialized;
+}
+
+void eol_opengl_get_screen_coordinate(
+  GLdouble glx,
+  GLdouble gly,
+  GLdouble glz,
+  const GLdouble * model,
+  const GLdouble * proj,
+  const GLint    * view,
+  GLint    *x,
+  GLint    *y
+)
+{
+  GLdouble tx,ty,tz;
+  gluProject(glx,gly,glz,model,proj,view,&tx,&ty,&tz);
+  if (x)*x = (GLint)x;
+  if (y)*y = (GLint)y;
+}
+
+void eol_opengl_get_gl_coordinate(
+  GLint    x,
+  GLint    y,
+  GLdouble z,
+  const GLdouble * model,
+  const GLdouble * proj,
+  const GLint    * view,
+  GLdouble * glx,
+  GLdouble * gly,
+  GLdouble * glz
+  )
+{  
+  GLdouble scrx, scry;
+  scrx = (GLdouble)x;
+  scry = view[3] - (GLdouble)y;
+  
+  gluUnProject(scrx,scry,z,model,proj,view,glx,gly,glz);
+}
+
+GLint eol_opengl_power_of_two(GLint in)
+{
+  /*TODO: this does nothing*/
+  return in;  
+}
+/*eol@eof*/
 

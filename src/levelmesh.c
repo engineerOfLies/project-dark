@@ -116,8 +116,11 @@ cpShape *AddSegmentToSpace(int sx,int sy,int ex,int ey,cpSpace *space)
 {
   cpShape *shape;
   if(space == NULL)return NULL;
-  shape = cpSegmentShapeNew(NULL, cpv(sx,sy), cpv(ex,ey), 32);
-  if(shape != NULL)cpSpaceAddStaticShape(space, shape);
+  shape = cpSegmentShapeNew(cpSpaceGetStaticBody(space), cpv(sx,sy), cpv(ex,ey), 32);
+  if (shape != NULL)
+  {
+      cpSpaceAddShape(space, shape);
+  }
   return shape;
 }
 

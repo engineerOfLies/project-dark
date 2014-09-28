@@ -286,7 +286,14 @@ void ClearLevel()
   if(level.tilelist != NULL)free(level.tilelist);
   if(level.objlist != NULL)free(level.objlist);
   memset(&level,0,sizeof(level));
-  ClearEntitiesExcept(PlayerEnt);
+  if (PlayerEnt == NULL)
+  {
+    ClearEntities();
+  }
+  else
+  {
+    ClearEntitiesExcept(PlayerEnt);
+  }
 }
 
 void NewLevel(char name[80],int x, int y, char background[80],char tileset[80], int fill, int deftile)
@@ -408,11 +415,11 @@ void DrawLevel(int edit)
   {
     drawAllEntities(edit,0);
     DrawAllParticles();
-    /*GenerateNightMask();*/
-    DrawNightMask();
+//    GenerateNightMask();
+//    DrawNightMask();
     DrawLevelUnknown();
   }
-  /*DrawMesh();*/
+  //DrawMesh();
 /*  DrawAllParticles();*/
   glPopMatrix();
 }
@@ -610,6 +617,7 @@ void BuildLattice()
   int i;
   int s = 0;
   if(LevelSpace == NULL)LevelSpace = cpSpaceNew();
+  cpSpaceSetCollisionSlop(LevelSpace, 0.2);
   ClearLevelShapes();
   LevelShapes = (cpShape **)malloc(sizeof(cpShape *) * level.numtiles * 4);
   memset(LevelShapes,0,sizeof(cpShape *) * level.numtiles * 4);

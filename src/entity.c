@@ -15,7 +15,6 @@ void InitEntList()
 {
   int i;
   numents = 0;
-  memset(EntityList,0,sizeof(Entity) * MAXENTITIES);
   for(i = 0 ;i < MAXENTITIES  ;i++)
   {
     EntityList[i].used = 0;
@@ -26,6 +25,7 @@ void InitEntList()
     EntityList[i].self=NULL;
     EntityList[i].owner = NULL;
   }
+  memset(EntityList,0,sizeof(Entity) * MAXENTITIES);
 }
 
 void ClearEntities()

@@ -1,6 +1,7 @@
 #include "combat.h"
 #include "particle.h"
 #include "monsters.h"
+#include <chipmunk/chipmunk.h>
 
 extern Uint32 NOW;
 extern Entity *PlayerEnt;
@@ -51,8 +52,8 @@ int BackCheck(float AOA, Entity *def)
 {
   int angle;
   cpVect v1,v2;
-  v1 = cpvforangle(AOA);
-  v2 = cpvforangle(def->r.z);
+  v1 = cpv(cpfcos(AOA), cpfsin(AOA));
+  v2 = cpv(cpfcos(def->r.z), cpfsin(def->r.z));
   angle = AngleBetweenVectors2D(M_Coord(v1.x,v1.y,0),M_Coord(v2.x,v2.y,0));
   if(angle < 10)return 1;
   return 0;

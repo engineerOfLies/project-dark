@@ -9,6 +9,7 @@
 #include "audio.h"
 #include "particle.h"
 #include "controls.h"
+#include "simple_logger.h"
 
 Sprite *splash = NULL;
 extern SDL_Rect Camera; /*x & y are the coordinates for the background map, w and h are of the screen*/
@@ -106,6 +107,7 @@ void CleanUpAll()
 void Init_All(const char *argv)
 {
   SDL_Surface *icon = NULL;
+  init_logger();
   Init_Graphics(1024,768,windowedMode);
   PHYSFS_init(argv);
   PHYSFS_addToSearchPath("./", 1);

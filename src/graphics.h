@@ -19,10 +19,10 @@
 #ifndef _GRAPHICS_
 #define _GRAPHICS_
 
-#include "initGL.h"
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
+#include "initGL.h"
 
 /*
 The Z value of the 2D plane, a range of 0 to 1

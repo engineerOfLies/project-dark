@@ -21,9 +21,8 @@ CC      = gcc
 GLIB_CFLAGS = `pkg-config --cflags glib-2.0`
 GLIB_LDFLAGS = `pkg-config --libs glib-2.0`
 SDL_CFLAGS = `sdl-config --cflags`
-SDL_LDFLAGS = `sdl-config --libs` -lSDL_image -lSDL_ttf -lSDL_mixer -lSDL_net -lGLU -lz -lphysfs -lglib-2.0 -lyaml
-YAML_LDFLAGS = /usr/lib/x86_64-linux-gnu/libyaml.so
-LFLAGS = -g  -o ../$(PROJECT) -lphysfs
+SDL_LDFLAGS = `sdl-config --libs` -lSDL_image -lSDL_ttf -lSDL_mixer -lSDL_net -lGL -lGLU -lz -lphysfs -lglib-2.0 -lyaml -lm -lchipmunk
+LFLAGS = -g  -o ../$(PROJECT)
 CFLAGS = -g -Wall -pedantic -std=gnu99 -fgnu89-inline -Wno-unknown-pragmas 
 # -ffast-math for relase version
 
@@ -34,7 +33,7 @@ DOXYGEN = doxygen
 #
 
 $(PROJECT): $(OBJ)
-	$(CC) $(OBJ) $(LFLAGS) $(SDL_LDFLAGS) $(GLIB_LDFLAGS) $(YAML_LDFLAGS) libchipmunk.a
+	$(CC) $(OBJ) $(LFLAGS) $(SDL_LDFLAGS) $(GLIB_LDFLAGS)
 docs:
 	$(DOXYGEN) ../docs/Doxygen
   

@@ -1,9 +1,8 @@
-SDL_rwops_zzip.o: SDL_rwops_zzip.c SDL_rwops_zzip.h
 armatures.o: armatures.c armatures.h graphics.h initGL.h
 audio.o: audio.c audio.h
 c_collide.o: c_collide.c c_collide.h entity.h audio.h modelLoader.h \
  graphics.h initGL.h armatures.h levels.h glmodel.h glm.h gtrace.h \
- levelmesh.h
+ levelmesh.h simple_logger.h
 combat.o: combat.c combat.h gtrace.h levelmesh.h levels.h glmodel.h glm.h \
  graphics.h initGL.h modelLoader.h armatures.h entity.h audio.h \
  levelobj.h particle.h monsters.h player.h items.h
@@ -17,7 +16,7 @@ entity.o: entity.c entity.h audio.h modelLoader.h graphics.h initGL.h \
 font.o: font.c graphics.h initGL.h
 game.o: game.c graphics.h initGL.h modelLoader.h armatures.h menus.h \
  hud.h audio.h lighting.h entity.h levels.h glmodel.h glm.h particle.h \
- controls.h
+ controls.h simple_logger.h
 glm.o: glm.c glm.h graphics.h initGL.h
 glmodel.o: glmodel.c glmodel.h glm.h graphics.h initGL.h lighting.h
 graphics.o: graphics.c graphics.h initGL.h
@@ -67,6 +66,7 @@ projectiles.o: projectiles.c projectiles.h entity.h audio.h modelLoader.h \
  particle.h c_collide.h gtrace.h levelmesh.h combat.h player.h items.h
 region.o: region.c region.h levels.h glmodel.h glm.h graphics.h initGL.h \
  modelLoader.h armatures.h entity.h audio.h
+simple_logger.o: simple_logger.c simple_logger.h
 weapons.o: weapons.c weapons.h player.h entity.h audio.h modelLoader.h \
  graphics.h initGL.h armatures.h levels.h glmodel.h glm.h combat.h \
  gtrace.h levelmesh.h levelobj.h items.h

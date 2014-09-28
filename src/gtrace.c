@@ -171,7 +171,7 @@ int EdgeFromTile(LEdge *edge,int tile)
   return 0;
 }
 
-int LevelTrace(Coord s,Coord v, float radius, int clipmask, int ignore, Trace *trace)
+int NewLevelTrace(Coord s,Coord v, float radius, int clipmask, int ignore, Trace *trace)
 {
   cpSegmentQueryInfo info;
   Coord fn;
@@ -212,7 +212,7 @@ int LevelTrace(Coord s,Coord v, float radius, int clipmask, int ignore, Trace *t
   return 1;
 }
 
-int OldLevelTrace(Coord s,Coord v, float radius, int clipmask, int ignore, Trace *trace)
+int LevelTrace(Coord s,Coord v, float radius, int clipmask, int ignore, Trace *trace)
 {
   LEdge *edge = NULL;   /*edge index*/
   Coord n;    /*normal of collision*/
@@ -423,7 +423,7 @@ int GTrace(Coord s,Coord v, float radius, int clipmask, Trace *trace, Entity *se
   return endhit;
 }
 
-int OldGTrace(Coord s,Coord v, float radius, int clipmask, Trace *trace, Entity *self)
+int BackupGTrace(Coord s,Coord v, float radius, int clipmask, Trace *trace, Entity *self)
 {
   int hit;
   int endhit = 0;

@@ -25,22 +25,28 @@ typedef struct Entity_T
   struct Entity_T *self;	/*pointer to itself*/
   struct Entity_T *owner;	/*pointer to the owner Entity*/
   struct Entity_T *target;/*pointer to the entity that we are targetting or stuck too*/
+  
   cpShape *shape;           /*link to physics engine*/
   cpLayers cplayermask;      /*layes that this entity collides with*/
+  
   int     dirty;          /*dirty entites have been modified and need to be updated between frames*/
+  
   void (*think) (struct Entity_T *self);
   Uint32 NextThink;
   Uint16 ThinkRate;
   void (*update) (struct Entity_T *self);
   Uint32 NextUpdate;
   Uint16 UpdateRate;
+  
   void (*activate) (struct Entity_T *self,struct Entity_T *other); /*this is from the player use*/
   void (*touch) (struct Entity_T *self,struct Entity_T *other);/*this is the touch from walking into*/
   void (*hit) (struct Entity_T *self,struct Entity_T *other);  /*this is the touch from damage*/
   void (*die) (struct Entity_T *self,struct Entity_T *other);
+  
   int FloorDraw;          /*makes the item draw before the tiles*/
   char name[80];          /*name of the entity*/
   zfmModel *zfmmodel;
+  int padding[40];
   Sprite *texture;          /*the texture for the Entity*/
   int  useslayers;          /*if this entity uses the layered approach*/
   Sprite *layers[8];        /*the layers to make the entity*/
@@ -58,6 +64,7 @@ typedef struct Entity_T
   Coord color;            /*color of the entity*/
 
   Sound* sound[4];         /*4 sounds per ent*/
+  char pad[10];
   Coord p;                /*position*/
   Coord p2;               /*offset position*/
   Point path[PATHMAX];         /*the path to be followed to the entity's target*/
@@ -67,6 +74,7 @@ typedef struct Entity_T
   int   trailhead;        /**/
   int   trailcount;       /*starts 0, stays 16*/
   int   drawtrail;        /*if 1 draws the trails*/
+  
   Coord v;                /*velocity*/
   Coord mv;               /*desired movement vector*/
   Coord a;                /*acceleration*/

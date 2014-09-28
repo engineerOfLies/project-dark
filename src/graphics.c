@@ -857,6 +857,7 @@ void OldFreeSprite(Sprite *sprite)
 void FreeSprite(Sprite *sprite)
 {
   /*first lets check to see if the sprite is still being used.*/
+  if (!sprite)return;
   sprite->used--;
  /* if(sprite->used <= 0)
   {

@@ -14,6 +14,7 @@
 #include "npcs.h"
 #include "region.h"
 #include "controls.h"
+#include "simple_logger.h"
 
 extern Mouse_T Mouse;
 extern ScreenData  S_Data;
@@ -473,7 +474,8 @@ void GameWindow(char level[80],int newgame)
     }
     else
     {
-      SetupPlayer((playerstart->x * TILEW) + TILEW/2,(playerstart->y * TILEW) + TILEW/2);
+        slog("playerstart: (%i,%i)",playerstart->x,playerstart->y);
+      SetupPlayer(((playerstart->x+1) * TILEW) + TILEW/2,(playerstart->y * TILEW) + TILEW/2);
     }
     NewMsg("Press F1 for Controls");
   }
